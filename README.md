@@ -8,8 +8,18 @@ A slightly less reasonable person would have considered system requirements, exi
 And then there is me. Actually I did give a cursory glance at the above, but I was rather besotted with that case. Anyway, I don't expect anyone will mimic this project in every detail (the case is not an off-the-shelf item today, that I know of), but I hope some parts of it may be of some use to others.
 
 [The case](#the-case)
+
 [The controller](#the-controller)
 
+[The display](#the-display)
+
+[The battery](#the-battery)
+
+[The reading light](#the-reading-light)
+
+[Other hardware and mounting](#other-hardware-and-mounting)
+
+[The name](#the-name)
 
 ## The case:
 As mentioned above, this case started life as a display case for a pen and a calculator. It is a felt covered stamped steel case, with a spring-loaded hinge which holds it in either closed or approx. 120° open position. It is about 18cm long, 11 cm wide, and 2.2cm thick. I fitted a microswitch/limit switch that cuts battery power when the case is closed, eliminating any battery drain. While a case exactly like it may be hard to find, I think the basic layout has several advantages:
