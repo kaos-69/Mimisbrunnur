@@ -56,7 +56,7 @@ The reading light is fixed to the lip of the case lid with double-sided tape.
 
 The battery is fixed to the bottom half of the case, also with double-sided tape, underneath the baseplate.
 
-Also underneath the baseplate is the power switch ([Adafruit part# 819](https://www.adafruit.com/product/819), mounted with screws to the bottom half of the case, and located such that one of the springs that keep the case shut/open operates it.
+Also underneath the baseplate is the power switch ([Adafruit part# 819](https://www.adafruit.com/product/819), mounted with screws and a small wooden block to the bottom half of the case, and located such that one of the springs that keep the case shut/open operates it.
 
 ## The name:
 In Ásatrú, the old norse mythology, Mímisbrunnur is a well or fount of wisdom located at the roots of the world tree Yggdrasill. An e-reader can, in a good light and with a following wind, be considered, if not a fount then a vessel of knowledge, hence the name.
