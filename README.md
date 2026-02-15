@@ -7,6 +7,8 @@ A slightly less reasonable person would have considered system requirements, exi
 
 And then there is me. Actually I did give a cursory glance at the above, but I was rather besotted with that case. Anyway, I don't expect anyone will mimic this project in every detail (the case is not an off-the-shelf item today, that I know of), but I hope some parts of it may be of some use to others.
 
+I bought most of the parts for this from Adafruit. Product links are provided in the text. I have no affiliation with them except as a satisfied customer. Particularly nice is the level of documentation and support they provide for their products.
+
 [The case](#the-case)
 
 [The controller](#the-controller)
