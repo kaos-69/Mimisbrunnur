@@ -3,7 +3,7 @@ For some years now I've been considering joining the 21'st century and get an e-
 
 Needless to say, this is a very back-to-front approach to any project. A reasonable person, well, a reasonable person would just have bought any of the number of commercial offerings out there. That would have brought a slick and polished user interface, and with a bit of forethought wouldn't have locked one into any particular ecosystem.
 
-A slightly less reasonable person would have considered system requirements, existing software and best hardware choices, with the actual case probably being the list item on the list.
+A slightly less reasonable person would have considered system requirements, existing software and best hardware choices, with the actual case probably being the last item on the list.
 
 And then there is me. Actually I did give a cursory glance at the above, but I was rather besotted with that case. Anyway, I don't expect anyone will mimic this project in every detail (the case is not an off-the-shelf item today, that I know of), but I hope some parts of it may be of some use to others.
 
