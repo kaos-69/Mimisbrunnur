@@ -48,9 +48,9 @@ I'm using an [Adafruit Perma-proto](https://www.adafruit.com/product/1606) board
 
 This in turn is mounted to a baseplate made from diffusion acrylic ([Adafruit part# 4749](https://www.adafruit.com/product/4749)). This is a special type of acrylic intended to let LED indicators shine through, while being dark enough to hide one's messy wiring.
 
-The display is fixed on top of the baseplate with double sided tape, while the carrier board is fixed underneath the baseplate with screws and standoffs, and located so that the buttons come directly below the display, and the charge and general indicators are visible through the baseplate. The display cable is far too short to reach the controller when located like this, so an extention cable ([Adafruit part# 4230](https://www.adafruit.com/product/4230))and interconnect ([Adafruit part# 4524](https://www.adafruit.com/product/4524)) are needed.
+The display is fixed on top of the baseplate with double sided tape, while the carrier board is fixed underneath the baseplate with screws and standoffs, and located so that the buttons come directly below the display, and the charge and general indicators are visible through the baseplate. The display cable is far too short to reach the controller when located like this, so an extention cable ([Adafruit part# 4230](https://www.adafruit.com/product/4230)) and interconnect ([Adafruit part# 4524](https://www.adafruit.com/product/4524)) are needed.
 
-The baseplate is also fixed to the case with screws and standoffs. The height that the baseplate is fixed at is sufficient for the USB connector of the controller and the micro-SD slot to be accessible above the bottom half of the case. To make this work I had to remove the battery and Stemma QT connectors from the controller. The battery is connected through the header pins, and the Stemma connection is unused.
+The baseplate is also fixed to the case with screws and standoffs. The height of the baseplate is sufficient for the USB connector of the controller and the micro-SD slot to be accessible above the bottom half of the case. To make this work I had to remove the battery and Stemma QT connectors from the controller. The battery is connected through the header pins, and the Stemma connection is unused.
 
 The reading light is fixed to the lip of the case lid with double-sided tape.
 
@@ -59,5 +59,5 @@ The battery is fixed to the bottom half of the case, also with double-sided tape
 Also underneath the baseplate is the power switch ([Adafruit part# 819](https://www.adafruit.com/product/819), mounted with screws and a small wooden block to the bottom half of the case, and located such that one of the springs that keep the case shut/open operates it.
 
 ## The name:
-In Ásatrú, the old norse mythology, Mímisbrunnur is a well or fount of wisdom located at the roots of the world tree Yggdrasill. An e-reader can, in a good light and with a following wind, be considered, if not a fount then a vessel of knowledge, hence the name.
+In Ásatrú, the old norse mythology, Mímisbrunnur is a well or fount of wisdom located at the roots of the world tree Yggdrasill. An e-reader can be considered, if not a fount then a vessel of knowledge, hence the name.
 
