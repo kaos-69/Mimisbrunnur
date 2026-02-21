@@ -12,5 +12,6 @@ I bought most of the parts for this from Adafruit. Product links are provided in
 The name Mímisbrunnur comes from the old norse mythology Ásatrú. It is a well or fount of wisdom located at the roots of the world tree Yggdrasill. An e-reader can be considered, if not a fount then a vessel of knowledge.
 
 ##Documentation
+
 [Hardware](docs/HARDWARE.md)
 
