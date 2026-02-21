@@ -2,10 +2,16 @@ It may sound ass-forwards to provide instruction for something that there only e
 
 ## Physical components
 Physically, the reader consists of:
+
 1: An e-paper display
+
 2: A set of eight push buttons
+
 3: A reading light
+
 4: Two indicator lights
+
 5: A midro-SD slot/card to hold files
+
 6: A USB-C connector for charging and programming
 
