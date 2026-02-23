@@ -29,9 +29,9 @@ Menu options:
 
 <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/open.ico" alt="Browse / Open document"> Browse / Open document. This allows you to select a new document for reading. You will start browsing in the directory of the document you were reading. .. signifies parent disrectory. Child directories are signified by a trailing slash (/). You can return to reading where you left off by using Cancel, but once you have selected a new document, your history is deleted. Up to eight items are displayed on each page.
 
-<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmadd.ico" alt="Add bookmark"> <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmrem.ico" alt="Remove bookmark"> <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmgoto.ico" alt="Go to next bookmark"> Bookmarks. When reading, you can add or remove bookmarks for any page, and go to next bookmark after the current page. If there is no next bookmark, you will go to the first bookmark in the file.
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmadd.ico" alt="Add bookmark"> <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmrem.ico" alt="Remove bookmark"> <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmgoto.ico" alt="Go to next bookmark"> Bookmarks. When reading, you can add or remove bookmarks for any page, and go to next bookmark after the current page. If there is no next bookmark, you will go to the first bookmark in the document.
 
-<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/skip.ico" alt="Skip around"> Skip around. This allows you to skip to points in the document, which can be useful if you want to quickly find a specific passage.
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/skip.ico" alt="Skip around"> Skip around. This allows you to skip to several points in the document, which can be useful if you want to quickly find a specific passage.
 
 <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/light.ico" alt="Reading light"> Reading light. This will turn on or off the reading light.
 
