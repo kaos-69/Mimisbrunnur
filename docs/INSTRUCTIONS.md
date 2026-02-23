@@ -21,4 +21,17 @@ At the bottom is a menu corresponding to the buttons and indicating the function
 
 The two indicators are an amber charge indicator and a red busy indicator, both located near the USB connector. When the busy indicator is lit or flashing the buttons will not work, and the SD card may be in use and should not be removed.
 
-<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/prev.ico" alt="Previous page"> Previous page.
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/prev.ico" alt="Previous page"> Previous page. Used when reading or browsing for documents. Note that selecting previous page ehrn reading near the end of a large document can take some time (a matter of econds). This is because the firmware has to scan the entire document up to that point, in order to find the start of the previous page.
+
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/cancel.ico" alt="Cancel / Back history"> Cancel / Back history. This is used to cancel or back away from previously selected options. F.x. when following a link within a document, this function will bring you back to where you followed the link. Similarly, if you selected browse, this will bring you bak to reading mode where you left off.
+
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/open.ico" alt="Browse / Open document"> Browse / Open document. This allows you to select a new document for reading. You will start in the directory of the previous file. Selecting .. will bring you to the parent disrectory. Child directories are signified by a trailing slash (/). You can return to reading wher you left off by using Cancel, but once you have selected a new document, your history is deleted.
+
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmadd.ico" alt="Add bookmark"> <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmrem.ico" alt="Remove bookmark"> <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/bmgoto.ico" alt="Go to next bookmark"> Bookmarks. When reading, you can add or remove bookmarks for any page, and go to next bookmark after the current page. If there is no next bookmark, you will go to the first bookmark in the file.
+
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/skip.ico" alt="Skip around"> Skip around. This allows you to skip to certain points in the document, which can be useful if you want to quickly find a specific passage.
+
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/light.ico" alt="Reading light"> Reading light. This will turn on or off the reading light.
+
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/next.ico" alt="Next page"> Next page. Used when reading or browsing for documents. Unlike the previous age option, this is practically instantaneous, apart from the time it takes to display the new page.
+
