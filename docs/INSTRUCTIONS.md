@@ -21,4 +21,4 @@ At the bottom is a menu corresponding to the buttons and indicating the function
 
 The two indicators are an amber charge indicator and a red busy indicator, both located near the USB connector. When the busy indicator is lit or flashing the buttons will not work, and the SD card may be in use and should not be removed.
 
-https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/prev.ico Previous page.
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/prev.ico" alt="Previous page"> Previous page.
