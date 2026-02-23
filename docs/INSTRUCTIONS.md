@@ -20,3 +20,5 @@ The display has a status bar at the top, providing information about battery vol
 At the bottom is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button. Each menu item can also show a number referemce, that is accessed by holding the corresponding button for approx. two seconds.
 
 The two indicators are an amber charge indicator and a red busy indicator, both located near the USB connector. When the busy indicator is lit or flashing the buttons will not work, and the SD card may be in use and should not be removed.
+
+https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/prev.ico Previous page.
