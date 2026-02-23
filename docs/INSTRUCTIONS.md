@@ -11,7 +11,7 @@ Physically, the user interface consists of:
 
 4: A reading light
 
-5: A micro-SD slot/card to hold files
+5: A micro-SD slot/card to hold documents
 
 6: A USB-C connector for charging and programming
 
