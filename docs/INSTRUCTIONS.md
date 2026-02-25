@@ -25,7 +25,7 @@ When browsing, the reader will show up to eight items (directories and/or docume
 
 At the top of the display a status bar is shown. When browsing this shows the current page and number of pages in the current directory. When reading it shows the name of the current document and your place within it in percent. Always shown is free memory and battery voltage. Note that the status bar is only updated when the display is, so the values may not be current if the reader has been left unused for a substantial time.
 
-Menu options:
+## Menu options:
 
 <img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/prev.ico" alt="Previous page"> Previous page. Used when reading or browsing for documents. Note that selecting previous page when reading near the end of a large document can take some time (a matter of econds). This is because the firmware has to scan the entire document up to that point, in order to find the start of the previous page. The busy indicator blinks rapidly while doing this.
 
