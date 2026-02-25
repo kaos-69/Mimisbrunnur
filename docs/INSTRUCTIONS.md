@@ -15,11 +15,15 @@ Physically, the user interface consists of:
 
 6: A USB-C connector for charging and programming
 
-The display has a status bar at the top, providing information about battery voltage, free memory and the main contents of the display, the last mentioned dependent on what is being displayed.
-
-At the bottom is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button. Each menu item can also show a number referemce, that is accessed by holding the corresponding button for approx. two seconds.
-
 The two indicators are an amber charge indicator and a red busy indicator, both located near the USB connector. When the busy indicator is lit or flashing the buttons will not work, and the SD card may be in use and should not be removed.
+
+At the bottom of the diplay is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button. For numbered references on the display (directory items when browsing or links when reading) there is also number at the corresponding button. To select these, hold the button for approx. 2 seconds, or until the busy indicator comes on.
+
+When the reader is started up with a previously unread memory card you will be presented with a browse display, where you can select a document to read. If it is started without a memory card an error message is displayed. For subsequent starts the reader will return you to the document and place you were reading.
+
+When browsing, the reader will show up to eight items (directories and/or documents) at a time. If there are more than eight items you can move between pages with the next and previous buttons. The working path is shown at the top of the screen (/ initially, for root). Items ending with / are directories. In all directories except root you will also find .. for parent directory.
+
+At the top of the display a status bar is shown. When browsing this shows the current page and number of pages in the current directory. When reading it shows the name of the current document and you place within it in percent. Always shown is free memory and battery voltage. Note that the status bar is only updated when the display is, so the values may not be current if the reader has been left on for a substantial time.
 
 Menu options:
 
