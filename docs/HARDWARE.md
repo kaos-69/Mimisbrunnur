@@ -10,7 +10,7 @@
 
 [Other hardware and mounting](#other-hardware-and-mounting)
 
-<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20%20diagram.jpg" alt="Mímisbrunnur circuit diagram">
+<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20diagram.jpg" alt="Mímisbrunnur circuit diagram">
 
 ## The case:
 As mentioned elsewhere, this case started life as a display case for a pen and a calculator. It is a felt covered stamped steel case, with a spring-loaded hinge which holds it in either closed or approx. 120° open position. It is about 18cm long, 11 cm wide, and 2.2cm thick. I fitted a microswitch/limit switch that cuts battery power when the case is closed, eliminating any battery drain. While a case exactly like it may be hard to find, I think the basic layout has several advantages:
