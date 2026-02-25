@@ -1,3 +1,5 @@
+<img src="https://github.com/kaos-69/Mimisbrunnur/raw/refs/heads/main/images/closed.jpg" alt="Mímisbrunnur closed">
+
 # Mimisbrunnur
 For some years now I've been considering joining the 21'st century and get an e-reader. One day when I was sorting through some old junk at my family home, I came across this presentation case (from the early 80's I think) that used to hold a Parker ball-point pen and a small calculator. With the pen lost and the calculator broken, I was about to toss it when a thought struck me; this would make a rather nice case for an e-reader. Thus was Mimisbrunnur born.
 
