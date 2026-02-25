@@ -23,7 +23,7 @@ When the reader is started up with a previously unread memory card you will be p
 
 When browsing, the reader will show up to eight items (directories and/or documents) at a time. If there are more than eight items you can move between pages with the next and previous buttons. The working path is shown at the top of the screen (/ initially, for root). Items ending with / are directories. In all directories except root you will also find .. for parent directory.
 
-At the top of the display a status bar is shown. When browsing this shows the current page and number of pages in the current directory. When reading it shows the name of the current document and you place within it in percent. Always shown is free memory and battery voltage. Note that the status bar is only updated when the display is, so the values may not be current if the reader has been left on for a substantial time.
+At the top of the display a status bar is shown. When browsing this shows the current page and number of pages in the current directory. When reading it shows the name of the current document and your place within it in percent. Always shown is free memory and battery voltage. Note that the status bar is only updated when the display is, so the values may not be current if the reader has been left unused for a substantial time.
 
 Menu options:
 
