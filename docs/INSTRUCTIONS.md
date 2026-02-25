@@ -1,4 +1,4 @@
-It may sound ass-forwards to provide instructions for something that there only exists one example of, and that in a constant flux of development, but I think they can provide a sense of what the reader is and how it works, and thereby whether anyone would want to dive down the rabbit hole and make something similar.
+It may sound ass-forwards to provide operating instructions for something that there only exists one example of, and that in a constant flux of development, but I think they can provide a sense of what the reader is and how it works, and thereby whether anyone would want to dive down the rabbit hole and make something similar.
 
 ## Physical components
 Physically, the user interface consists of:
