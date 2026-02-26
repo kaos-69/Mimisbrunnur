@@ -1,4 +1,4 @@
-<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20%20diagram.pdf" alt="Mímisbrunnur circuit diagram">
+<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20%20diagram.jpg" alt="Mímisbrunnur circuit diagram">
 
 [The case](#the-case)
 
