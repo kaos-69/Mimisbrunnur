@@ -32,7 +32,7 @@ I hesitate a bit to show you my layout drawing, as that is an idiosyncratic form
 
 <img src="/images/M%C3%ADmisbrunnur%20-%20layout.jpg" alt="Carrier board layout" width=400>
 
-This is supposed to be a kind of top-down x-ray view. Components and wire links on the other side of the carries board are shown with dotted lines. Note that not all the pins of the controller and micro-SD breakout boards are connected. **In particular pin #2 of the controller (the 3.3V pin nearest the USB connector) must not be connected, otherwise the controllers voltage regulator will be damaged the first time S8 is pressed under power.**
+This is supposed to be a kind of top-down x-ray view. Components and wire links on the other side of the carries board are shown with dotted lines. Note that not all the pins of the controller and micro-SD breakout boards are connected. **In particular pin #2 of the controller (the 3.3V pin nearest the USB connector) must not be connected, otherwise the controller's voltage regulator will be damaged the first time S8 is pressed under power.**
 
 The carrier in turn is mounted to a faceplate made from diffusion acrylic ([Adafruit product 4749](https://www.adafruit.com/product/4749)). This is a special type of acrylic intended to let LED indicators shine through, while being dark enough to hide one's messy wiring.
 
