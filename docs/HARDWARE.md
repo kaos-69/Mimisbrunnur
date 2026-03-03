@@ -28,6 +28,13 @@ As mentioned before, the e-paper display does not have or need a backlight, but 
 
 I'm using an Adafruit Perma-proto ([product# 1606](https://www.adafruit.com/product/1606)) as a carrier board. This is a high quality perfboard laid out like a solderless breadboard. It carries the controller, a micro-SD breakout board ([Adafruit product# 4682](https://www.adafruit.com/product/4682)), a set of eight tactile buttons ([Adafruit product# 1490](https://www.adafruit.com/product/1490)) for operating the reader, the reading light drive circuit, and a voltage divider for battery monitoring.
 
+I hesitate a bit to show you my layout drawing, as that is an idiosyncratic format that I have developed over the years, but in the hope that is will be of some use, here goes:
+
+<img src="/images/M%C3%ADmisbrunnur%20-%20layout.jpg" alt="Carrier board layout" width=400>
+
+This is supposed to be a kind of top-down x-ray view. Components and wire links on the other side of the carries board are shown with dotted lines. Note that not all the pins of the controller and micro-SD breakout boards are connected. **In particular pin #2 of the controller (the 3.3V pin nearest the USB connector) must not be connected, otherwise the voltage regulator onboard the controller will be damaged the first time S8 is pressed while the reader is powered on.**
+
+
 This in turn is mounted to a faceplate made from diffusion acrylic ([Adafruit product 4749](https://www.adafruit.com/product/4749)). This is a special type of acrylic intended to let LED indicators shine through, while being dark enough to hide one's messy wiring.
 
 The display is fixed on top of the faceplate with double sided tape, while the carrier board is fixed underneath the faceplate with screws and standoffs, and located so that the buttons come through holes drilled in the faceplate, directly below the display, and so that the LED indicators on the controller are visible through the faceplate. The display cable is far too short to reach the controller when located like this, so an extention cable ([Adafruit product# 4230](https://www.adafruit.com/product/4230)) and interconnect ([Adafruit product# 4524](https://www.adafruit.com/product/4524)) are needed.
@@ -39,4 +46,5 @@ The reading light is fixed to the lip of the case lid with double-sided tape.
 The battery is fixed to the bottom half of the case with double-sided tape, underneath the faceplate.
 
 Also underneath the faceplate is the power switch ([Adafruit product# 819](https://www.adafruit.com/product/819), mounted with screws and a small wooden block to the bottom half of the case, and located so that one of the springs that keep the case shut/open operates it.
+
 <img src="/images/base-bottom.jpg" alt="Base plate bottom view, showing carried board and display connection" width=400>
