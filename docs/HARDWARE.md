@@ -1,6 +1,15 @@
-<img src="images/case-battery-switch.jpg" alt="Case with battery and power switch mounted">
+## The case:
+<img src="/images/case-battery-switch.jpg" alt="Case with battery and power switch mounted">
+As mentioned elsewhere, this case started life as a display case for a pen and a calculator. It is a felt covered stamped steel case, with a spring-loaded hinge which holds it in either closed or approx. 120° open position. It is about 18cm long, 11 cm wide, and 2.2cm thick. I fitted a microswitch/limit switch that cuts battery power when the case is closed, eliminating any battery drain. While a case exactly like it may be hard to find, I think the basic layout has several advantages:
+1. The size and shape is approximately that of a paperback. It is small enough that it can be held at a comfortable reading distance for an extended time, while allowing a useful screen size.
+2. The cover means that it opens up like a book.
+3. The cover protects the screen while not in use.
+4. The cover provides a place to mount a reading light. E-paper is low power and sunlight readable, but in dim light it requires a light source.
+5. It provides the means to automatically shut off battery power when not in use, as described above. You could of course fit a separate power switch to do the same, but that means always remembering to turn off when you stop reading.
 
-<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20diagram.jpg" alt="Mímisbrunnur circuit diagram">
+The material it is made of doesn't really matter. In fact a plastic case would be slightly easier to work with as you wouldn't have to worry about shorts through the case. For anyone with a 3D printer, it might be worth considering a 3D printed case, incorporating the points mentioned above. I would be very glad to hear of any case solutions anybody comes up with.
+
+<img src="/images/M%C3%ADmisbrunnur%20-%20diagram.jpg" alt="Mímisbrunnur circuit diagram">
 
 [The case](#the-case)
 
@@ -13,16 +22,6 @@
 [The reading light](#the-reading-light)
 
 [Other hardware and mounting](#other-hardware-and-mounting)
-
-## The case:
-As mentioned elsewhere, this case started life as a display case for a pen and a calculator. It is a felt covered stamped steel case, with a spring-loaded hinge which holds it in either closed or approx. 120° open position. It is about 18cm long, 11 cm wide, and 2.2cm thick. I fitted a microswitch/limit switch that cuts battery power when the case is closed, eliminating any battery drain. While a case exactly like it may be hard to find, I think the basic layout has several advantages:
-1. The size and shape is approximately that of a paperback. It is small enough that it can be held at a comfortable reading distance for an extended time, while allowing a useful screen size.
-2. The cover means that it opens up like a book.
-3. The cover protects the screen while not in use.
-4. The cover provides a place to mount a reading light. E-paper is low power and sunlight readable, but in dim light it requires a light source.
-5. It provides the means to automatically shut off battery power when not in use, as described above. You could of course fit a separate power switch to do the same, but that means always remembering to turn off when you stop reading.
-
-The material it is made of doesn't really matter. In fact a plastic case would be slightly easier to work with as you wouldn't have to worry about shorts through the case. For anyone with a 3D printer, it might be worth considering a 3D printed case, incorporating the points mentioned above. I would be very glad to hear of any case solutions anybody comes up with.
 
 ## The controller:
 The Adafruit RP2040 feather ThinkInk dev board ([Adafruit product# 5727](https://www.adafruit.com/product/5727) is at the heart of the reader. It features the same RP2040 microcontroller as in Raspberry's own Pi Pico, a charging circuit for a LiPo battery, and an interface for a 24-pin e-paper display.
