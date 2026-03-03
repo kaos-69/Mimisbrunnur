@@ -1,3 +1,5 @@
+<img src="images/case-battery-switch.jpg" alt="Case with battery and power switch mounted">
+
 <img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20diagram.jpg" alt="Mímisbrunnur circuit diagram">
 
 [The case](#the-case)
