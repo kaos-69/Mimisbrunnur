@@ -23,7 +23,9 @@ The battery was sourced locally, what with transport restrictions. It's a 2000mA
 
 As mentioned before, the e-paper display does not have or need a backlight, but it does need a decent ambient illumination. When that is not present, a reading light is required. With this design, an almost perfect placement for such a light is inside the lip of the cover of the reader. My first thought was a section of LED strip, and that is still an option. However, these are generally intended for 12V operating voltage and would thus need a boost regulator. Not an unsurmountable obstacle, but then i came across another Adafruit product, the LED sequin ([product# 1758](https://www.adafruit.com/product/1758), warm white version). These are simply a surface mount LED and resistor on a tiny PCB. They are intended to be sewn with conductive thread to textiles for decoration, but there is nothing that prevents you lining them up and soldering to a couple of wires for a makeshift low voltage LED strip. I wasn't sure how bright they would be so I used ten of them, which is overkill. I am running them at 38% with PWM and that's plenty bright, so four of them at <100% should work. Theyre quoted as drawing about 5mA each from a 3.3V source. That would mean 50mA for the ten of them, which is a tall order for a microcontroller io pin. I am therefore using a simple BJT transistor drive circuit to run them directly from the battery.
 
-## Other hardware and mounting:
+## Assembly:
+<img src="/images/carrier.jpg" alt="Carrier board with controller, micro-SD breakout board and tactile switches" width=400>
+
 I'm using an Adafruit Perma-proto ([product# 1606](https://www.adafruit.com/product/1606)) as a carrier board. This is a high quality perfboard laid out like a solderless breadboard. It carries the controller, a micro-SD breakout board ([Adafruit product# 4682](https://www.adafruit.com/product/4682)), a set of eight tactile buttons ([Adafruit product# 1490](https://www.adafruit.com/product/1490)) for operating the reader, the reading light drive circuit, and a voltage divider for battery monitoring.
 
 This in turn is mounted to a faceplate made from diffusion acrylic ([Adafruit product 4749](https://www.adafruit.com/product/4749)). This is a special type of acrylic intended to let LED indicators shine through, while being dark enough to hide one's messy wiring.
@@ -37,3 +39,4 @@ The reading light is fixed to the lip of the case lid with double-sided tape.
 The battery is fixed to the bottom half of the case with double-sided tape, underneath the faceplate.
 
 Also underneath the faceplate is the power switch ([Adafruit product# 819](https://www.adafruit.com/product/819), mounted with screws and a small wooden block to the bottom half of the case, and located so that one of the springs that keep the case shut/open operates it.
+<img src="/images/base-bottom.jpg" alt="Base plate bottom view, showing carried board and display connection" width=400>
