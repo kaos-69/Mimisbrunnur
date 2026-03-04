@@ -7,7 +7,7 @@ Parse HTML and XHTML files.
 Parse styles of HTML/XHTML, whether external stylesheets, internal, inline or WEB 1.0 tags.  
 Do margins, indents, bold, italic, underline and strikethrough in accordance with these.  
 Parse .ncx files (used in ebooks).  
-Handle ASCII, UTF-8 and UTF-16.  
+Handle ASCII, UTF-8, UTF-16 and (X)HTML escape sequences.  
 Read and browse any of the above.  
 Follow links in documents.  
 Set/remove and go to bookmarks.  
