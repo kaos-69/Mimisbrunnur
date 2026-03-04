@@ -15,7 +15,7 @@
 
 ## Can not do (why not, how you can work around it, and will it change):
 
-**Parse ebook files.** Shocking for an e-reader, I know. .ebook files are simply zipped archives, but Mímisbrunnur, as of even day, does not have the ability to deal with this. But if you preprocess them by unzipping them (various tools exist, including built in support in Windows, but my favourite is [7zip](https://www.7-zip.org/)) you can browse and read the contents.  
+**Parse ebook files.** Shocking for an e-reader, I know. .ebook files are simply zipped archives, but Mímisbrunnur, as of even date, does not have the ability to deal with this. But if you preprocess them by unzipping them (various tools exist, including built in support in Windows, but my favourite is [7zip](https://www.7-zip.org/)) you can browse and read the contents.  
 **Parse pdb, prc, pdf or other file formats.** I recommend [Calibre](https://calibre-ebook.com/download) to convert those to ebook format and then unzipping.  
 **Images of any kind.** This will probably be the next major update though.  
 **Colours.** This is primarily a hardware limitation, as the e-paper used is black-and-white.  
