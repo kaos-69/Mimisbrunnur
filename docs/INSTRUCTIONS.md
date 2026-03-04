@@ -1,23 +1,16 @@
 It may sound ass-forwards to provide operating instructions for something that there only exists one example of, and that in a constant flux of development, but I think they can provide a sense of what the reader is and how it works, and thereby whether anyone would want to dive down the rabbit hole and make something similar.
 
-## Physical components
-<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20overview.jpg" alt="Mímisbrunnur overview">
-
-1: An e-paper display
-
-2: A set of eight push buttons
-
-3: Two indicator lights
-
-4: A reading light
-
-5: A micro-SD slot/card to hold documents
-
-6: A USB-C connector for charging and programming
+<img src="https://github.com/kaos-69/Mimisbrunnur/blob/main/images/M%C3%ADmisbrunnur%20-%20overview.jpg" alt="Mímisbrunnur overview" width=400><br>**Overview.**  
+1: An e-paper display  
+2: A set of eight push buttons  
+3: Two indicator lights  
+4: A reading light  
+5: A micro-SD slot/card to hold documents  
+6: A USB-C connector for charging and programming  
 
 The two indicators are an amber charge indicator and a red busy indicator, both located near the USB connector. When the busy indicator is lit or flashing the buttons will not work, and the SD card may be in use and should not be removed.
 
-At the bottom of the diplay is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button (see bvelow). For numbered references on the display (directory items when browsing or links when reading) there is also number at the corresponding button. To acess those, hold the button for approx. 2 seconds, or until the busy indicator comes on.
+At the bottom of the display is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button (see bvelow). For numbered references on the display (directory items when browsing or links when reading) there is also number at the corresponding button. To acess those, hold the button for approx. 2 seconds, or until the busy indicator comes on.
 
 When the reader is started up with a previously unread memory card, you will be presented with a browse display where you can select a document to read. If it is started without a memory card an error message is displayed. For subsequent starts the reader will return you to the document and place you were reading.
 
