@@ -38,7 +38,7 @@ The carrier in turn is mounted to a faceplate made from diffusion acrylic ([Adaf
 
 The display is fixed on top of the faceplate with double sided tape, while the carrier board is fixed underneath the faceplate with screws and standoffs, and located so that the buttons come through holes drilled in the faceplate, directly below the display, and so that the LED indicators on the controller are visible through the faceplate. The display cable is far too short to reach the controller when located like this, so an extention cable ([Adafruit product# 4230](https://www.adafruit.com/product/4230)) and interconnect ([Adafruit product# 4524](https://www.adafruit.com/product/4524)) are needed.
 
-<img src="/images/base-bottom.jpg" alt="Base plate bottom view, showing carried board and display connection" width=400><br>**Base plate bottom view, showing carried board and display connection.**
+<img src="/images/base-bottom.jpg" alt="Base plate bottom view, showing carrier board and display connection" width=400><br>**Base plate bottom view, showing carrier board and display connection.**
 
 The faceplate is in turn fixed to the case with screws and standoffs. The height of the faceplate is sufficient for the USB connector of the controller and the micro-SD slot to be accessible above the bottom half of the case. To make this work I had to remove the battery and Stemma QT connectors from the controller. The battery can be connected through the header pins, and the Stemma connection is unused.
 
