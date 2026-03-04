@@ -1,5 +1,5 @@
 ## The case:
-<img src="/images/case-battery-switch.jpg" alt="Case with battery and power switch mounted" width=400>
+<img src="/images/case-battery-switch.jpg" alt="Case with battery and power switch mounted" width=400><br>**Case with battery and power switch mounted.**
 
 As mentioned elsewhere, this case started life as a display case for a pen and a calculator. It is a felt covered stamped steel case, with a spring-loaded hinge which holds it in either closed or approx. 120° open position. It is about 18cm long, 11 cm wide, and 2.2cm thick. I fitted a microswitch/limit switch that cuts battery power when the case is closed, eliminating any battery drain. While a case exactly like it may be hard to find, I think the basic layout has several advantages:
 1. The size and shape is approximately that of a paperback. It is small enough that it can be held at a comfortable reading distance for an extended time, while allowing a useful screen size.
@@ -11,7 +11,7 @@ As mentioned elsewhere, this case started life as a display case for a pen and a
 The material it is made of doesn't really matter. In fact a plastic case would be slightly easier to work with as you wouldn't have to worry about shorts through the case. For anyone with a 3D printer, it might be worth considering a 3D printed case, incorporating the points mentioned above. I would be very glad to hear of any case solutions anybody comes up with.
 
 ## The circuit:
-<img src="/images/M%C3%ADmisbrunnur%20-%20diagram.jpg" alt="Mímisbrunnur circuit diagram" width=400>
+<img src="/images/M%C3%ADmisbrunnur%20-%20diagram.jpg" alt="Mímisbrunnur circuit diagram" width=400><br>**Circuit diagram.**
 
 The circuit is quite simple, due to the heavy lifting being done by the controller and e-paper display.
 
@@ -24,13 +24,13 @@ The battery was sourced locally, what with transport restrictions. It's a 2000mA
 As mentioned before, the e-paper display does not have or need a backlight, but it does need a decent ambient illumination. When that is not present, a reading light is required. With this design, an almost perfect placement for such a light is inside the lip of the cover of the reader. My first thought was a section of LED strip, and that is still an option. However, these are generally intended for 12V operating voltage and would thus need a boost regulator. Not an unsurmountable obstacle, but then i came across another Adafruit product, the LED sequin ([product# 1758](https://www.adafruit.com/product/1758), warm white version). These are simply a surface mount LED and resistor on a tiny PCB. They are intended to be sewn with conductive thread to textiles for decoration, but there is nothing that prevents you lining them up and soldering to a couple of wires for a makeshift low voltage LED strip. I wasn't sure how bright they would be so I used ten of them, which is overkill. I am running them at 38% with PWM and that's plenty bright, so four of them at <100% should work. Theyre quoted as drawing about 5mA each from a 3.3V source. That would mean 50mA for the ten of them, which is a tall order for a microcontroller io pin. I am therefore using a simple BJT transistor drive circuit to run them directly from the battery.
 
 ## Assembly:
-<img src="/images/carrier.jpg" alt="Carrier board with controller, micro-SD breakout board and tactile switches" width=400>
+<img src="/images/carrier.jpg" alt="Carrier board with controller, micro-SD breakout board and tactile switches" width=400><br>**Carrier board with controller, micro-SD breakout board and tactile switches.**
 
 I'm using an Adafruit Perma-proto ([product# 1606](https://www.adafruit.com/product/1606)) as a carrier board. This is a high quality perfboard laid out like a solderless breadboard. It carries the controller, a micro-SD breakout board ([Adafruit product# 4682](https://www.adafruit.com/product/4682)), a set of eight tactile buttons ([Adafruit product# 1490](https://www.adafruit.com/product/1490)) for operating the reader, the reading light drive circuit, and a voltage divider for battery monitoring.
 
 I hesitate a bit to show you my layout drawing, as that is an idiosyncratic format that I have developed over the years, but in the hope that is will be of some use, here goes:
 
-<img src="/images/M%C3%ADmisbrunnur%20-%20layout.jpg" alt="Carrier board layout" width=400>
+<img src="/images/M%C3%ADmisbrunnur%20-%20layout.jpg" alt="Carrier board layout" width=400><br>**Carrier board layout.**
 
 This is supposed to be a kind of top-down x-ray view. Components and wire links on the other side of the carries board are shown with dotted lines. Note that not all the pins of the controller and micro-SD breakout boards are connected. **In particular pin #2 of the controller (the 3.3V pin nearest the USB connector) must not be connected, otherwise the controller's voltage regulator will be damaged the first time S8 is pressed under power.**
 
@@ -38,7 +38,7 @@ The carrier in turn is mounted to a faceplate made from diffusion acrylic ([Adaf
 
 The display is fixed on top of the faceplate with double sided tape, while the carrier board is fixed underneath the faceplate with screws and standoffs, and located so that the buttons come through holes drilled in the faceplate, directly below the display, and so that the LED indicators on the controller are visible through the faceplate. The display cable is far too short to reach the controller when located like this, so an extention cable ([Adafruit product# 4230](https://www.adafruit.com/product/4230)) and interconnect ([Adafruit product# 4524](https://www.adafruit.com/product/4524)) are needed.
 
-<img src="/images/base-bottom.jpg" alt="Base plate bottom view, showing carried board and display connection" width=400>
+<img src="/images/base-bottom.jpg" alt="Base plate bottom view, showing carried board and display connection" width=400><br>**Base plate bottom view, showing carried board and display connection.**
 
 The faceplate is in turn fixed to the case with screws and standoffs. The height of the faceplate is sufficient for the USB connector of the controller and the micro-SD slot to be accessible above the bottom half of the case. To make this work I had to remove the battery and Stemma QT connectors from the controller. The battery can be connected through the header pins, and the Stemma connection is unused.
 
