@@ -42,6 +42,8 @@ The display is fixed on top of the faceplate with double sided tape, while the c
 
 The faceplate is in turn fixed to the case with screws and standoffs. The height of the faceplate is sufficient for the USB connector of the controller and the micro-SD slot to be accessible above the bottom half of the case. To make this work I had to remove the battery and Stemma QT connectors from the controller. The battery can be connected through the header pins, and the Stemma connection is unused.
 
+<img src="/images/USB-detail.jpg" alt="Access to USB connection" width=400><br>**Access to USB connection.**
+
 The reading light is fixed to the lip of the case lid with double-sided tape.
 
 The battery is fixed to the bottom half of the case with double-sided tape, underneath the faceplate.
