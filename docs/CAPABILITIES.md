@@ -16,7 +16,7 @@
 ## Can not do (why not, how you can work around it, and will it change):
 
 **Parse ebook files.** Shocking for an e-reader, I know. .ebook files are simply zipped archives, but Mímisbrunnur, as of even date, does not have the ability to deal with this. But you can preprocess them by unzipping them, for which various tools exist, including built in support in Windows and my favourite, [7zip](https://www.7-zip.org/). After that you can browse and read the contents.  
-**Parse pdb, prc, pdf or other file formats.** I recommend [Calibre](https://calibre-ebook.com/download) to convert those to ebook format and then unzipping. There are deep arbbit holes associated with each one, so I don't foresee native support being adde3d to Mímisbrunnur, useful at it would be.  
+**Parse pdb, prc, pdf or other file formats.** I recommend [Calibre](https://calibre-ebook.com/download) to convert those to ebook format and then unzipping. There are deep rabbit holes associated with each one, so I don't foresee native support being added to Mímisbrunnur, useful at it would be.  
 **Images of any kind.** This **will** probably be the next major update.  
 **Colours.** This is primarily a hardware limitation, as the e-paper used is black-and-white.  
 **Different fonts.** For a relatively low resolution display like this you need to use bitmap fonts. And they need to cover the character set you wish to use, in this case the CP1252 8-bit set. I settled on a single sans-serif proportional font, in normal, bold, italic and bold-italic. See comment at start of [Mimisbrunnur.ino](/code/Mimisbrunnur.ino) for details. It is limiting though, so in the future I might add a serifed monospace "typewriter" font.  
