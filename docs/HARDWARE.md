@@ -15,7 +15,7 @@ The material it is made of doesn't really matter. In fact a plastic case would b
 
 The circuit is quite simple, due to the heavy lifting being done by the controller and e-paper display.
 
-The controller is an Adafruit RP2040 feather ThinkInk dev board ([Adafruit product# 5727](https://www.adafruit.com/product/5727). It features the same RP2040 microcontroller as in Raspberry's own Pi Pico, a charging circuit for a LiPo battery, and an interface for a 24-pin e-paper display.
+The controller is an Adafruit RP2040 feather ThinkInk dev board ([Adafruit product# 5727](https://www.adafruit.com/product/5727)). It features the same RP2040 microcontroller as in Raspberry's own Pi Pico, a charging circuit for a LiPo battery, and an interface for a 24-pin e-paper display.
 
 The e-paper display is also supplied by Adafruit, the 5.83" monochrome e-paper, [product# 6397](https://www.adafruit.com/product/6397). This is the first time I work with an e-paper display, and I was somewhat disappointed at first, due to the almost 5 seconds update time and flashing black and white while doing so, but on further review this seems to be par for the course with this class of e-paper displays. I have found displays of this class with claimed update time of 3.5 seconds. There are also displays that use a different connection that claim less than one second update time, but that would require a different type of interfacee and maybe a more powerful controller. I should say though that the reader is IMO quite usable with this display, just that the experience could be smoother. Another option might be a TFT display, but that would sacrifice sunlight readability and, due to the backlight, some battery life.
 
