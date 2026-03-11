@@ -21,3 +21,4 @@ The name Mímisbrunnur comes from the old norse mythology Ásatrú. It is a well
 
 [Hardware](docs/HARDWARE.md)
 
+[Software](docs/SOFTWARE.md)
