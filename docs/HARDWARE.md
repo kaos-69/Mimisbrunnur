@@ -28,7 +28,7 @@ As mentioned before, the e-paper display does not have or need a backlight, but 
 
 I'm using an Adafruit Perma-proto ([product# 1606](https://www.adafruit.com/product/1606)) as a carrier board. This is a high quality perfboard laid out like a solderless breadboard. It carries the controller, a micro-SD breakout board ([Adafruit product# 4682](https://www.adafruit.com/product/4682)), a set of eight tactile buttons ([Adafruit product# 1490](https://www.adafruit.com/product/1490)) for operating the reader, the reading light drive circuit, and a voltage divider for battery monitoring.
 
-I hesitate a bit to show you my layout drawing, as that is an idiosyncratic format that I have developed over the years, but in the hope that is will be of some use, here goes:
+I hesitate a bit to show you my layout drawing, as that is an idiosyncratic format that I have developed over the years, but in the hope that it will be of some use, here goes:
 
 <img src="/images/M%C3%ADmisbrunnur%20-%20layout.jpg" alt="Carrier board layout" width=400><br>**Carrier board layout.**
 
