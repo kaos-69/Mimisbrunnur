@@ -6,6 +6,7 @@
 **Parse HTML and XHTML files.**  
 **Parse styles of HTML/XHTML,** whether external stylesheets, internal, inline or WEB 1.0 tags.  
 **Do margins, indents, bold, italic, underline and strikethrough** in accordance with these.  
+**Do left right and centre alignment**  
 **Parse .ncx files** (used in ebooks).  
 **Handle ASCII, UTF-8, UTF-16 and (X)HTML escape sequences.**  
 **Read and browse any of the above.**  
@@ -19,6 +20,7 @@
 **Parse pdb, prc, pdf or other file formats.** I recommend [Calibre](https://calibre-ebook.com/download) to convert those to ebook format and then unzipping. There are deep rabbit holes associated with each one, so I don't foresee native support being added to Mímisbrunnur, useful as it would be.  
 **Images of any kind.** This **will** probably be the next major update.  
 **Colours.** This is primarily a hardware limitation, as the e-paper used is black-and-white.  
+**Justfied text.** It will be left aligned instead.  
 **Different fonts.** For a relatively low resolution display like this you need to use bitmap fonts. And they need to cover the character set you wish to use, in this case the CP1252 8-bit set. I settled on a single sans-serif proportional font, in normal, bold, italic and bold-italic. See comment at start of [Mimisbrunnur.ino](/code/Mimisbrunnur.ino) for details. It is limiting though, so in the future I might add a serifed monospace "typewriter" font.  
 **Different font sizes.** See above. For different font sizes you would have to make / clean up a complete bitmap font set. You might get away with "pixel doubling" for larger fonts, i.e. making each pixel in the font occupy 4 (or 9 or 16) pixels on screen. That would lead to jagged fonts though, and a very coarse stepping in font sizes. For the time being, the best I can do is using boldface as a stand in for larger font sizes.  
 **Character sets / codepages other than CP1252.** The reader uses an 8-bit codepage, Windows CP1252, that includes codepoints 0x00 to 0xFF from Unicode, but replaces the extended control characters 0x80 to 0x9F with symbols and letters. This allows display of most western latin based languages, including my beloved native Icelandic. The choice of an 8-bit character set was partially because of the limitations of the software libraries I'm using, and partially because I didn't have time to dive down the rabbit holes of all the worlds writing systems, and partially because scope creep is already getting out of hand here.  
