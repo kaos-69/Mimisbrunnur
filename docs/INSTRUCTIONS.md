@@ -10,7 +10,7 @@ It may sound ass-forwards to provide operating instructions for something that t
 
 The two indicators are an amber charge indicator and a red busy indicator, both located near the USB connector. When the busy indicator is lit or flashing the buttons will not work, and the SD card may be in use and should not be removed.
 
-At the bottom of the display is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button (see bvelow). For numbered references on the display (directory items when browsing or links when reading) there is also number at the corresponding button. To acess those, hold the button for approx. 2 seconds, or until the busy indicator comes on.
+At the bottom of the display is a menu corresponding to the buttons and indicating the function of each one. Each menu item can show an icon, which function is accessed by a short press of the corresponding button (see below). For numbered references on the display (directory items when browsing, or links when reading) there is also a number at the corresponding button. To acess those, hold the button for approx. 2 seconds, or until the busy indicator comes on.
 
 When the reader is started up with a previously unread memory card, you will be presented with a browse display where you can select a document to read. If it is started without a memory card an error message is displayed. For subsequent starts the reader will return you to the document and place you were reading.
 
