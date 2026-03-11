@@ -16,7 +16,7 @@ The program can create and use two types of support files. In the root of the SD
 
 Both file types share a similar structure based on variable length records. Each record is a reference to a specific page within a document. For bookmark files each record consists of:
 - 8-bit flag value (currently only used to indicate whether the page starts with a fresh paragraph or a continuation from previous page).
-- 32-bit position of the starting point of the page within the document.
+- 32-bit starting point of the page within the document.
 - 8-bit size of the style stack at that point
 - The style stack
 
