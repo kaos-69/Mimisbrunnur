@@ -17,7 +17,10 @@ const styleflagref SFR_STRIKE={0x00000002,1}; //Strikethrough
 const styleflagref SFR_FONT={0x0000000C,2}; //0 regular, 1 italic, 2 bold, 3 bold italic
 const styleflagref SFR_ITALIC={0x00000004,2};
 const styleflagref SFR_BOLD={0x00000008,3};
-//Bits 4 to 7 reserved
+const styleflagref SFR_VERTICAL={0x00000030,4}; //0 standard, 1 super, 2 sub, 3 undefined
+const styleflagref SFR_SUP={0x00000010,4};
+const styleflagref SFR_SUB={0x00000020,5};
+//Bits 6 and 7 reserved
 const styleflagref SFR_ALIGN={0x00000300,8}; //0 left, 1 center, 2 right, 3 undefined
 const styleflagref SFR_CENTER={0x00000100,8};
 const styleflagref SFR_RIGHT={0x00000200,9};
@@ -134,6 +137,12 @@ void  processstyleproperty(int index, String &property, String &value,int valnum
       setflag(SFR_BOLD,stylelist[index].flagmask,1); //Mark as modified
       setflag(SFR_BOLD,stylelist[index].value[SVR_FLAGS],0); //Default to off
       if (value.indexOf("bold")!=-1) setflag(SFR_BOLD,stylelist[index].value[SVR_FLAGS],1);
+    } else if (property=="vertical-align") {
+      //Super/subscript
+      setflag(SFR_VERTICAL,stylelist[index].flagmask,3); //Mark as modified
+      setflag(SFR_VERTICAL,stylelist[index].value[SVR_FLAGS],0); //Default to off
+      if (value.indexOf("super")!=-1) setflag(SFR_SUP,stylelist[index].value[SVR_FLAGS],1);
+      if (value.indexOf("sub")!=-1) setflag(SFR_SUB,stylelist[index].value[SVR_FLAGS],1);
     } else if (property=="text-align") {
       //Alignment
       setflag(SFR_ALIGN,stylelist[index].flagmask,3); //Mark as modified

@@ -24,7 +24,7 @@ Sd Fat library by Bill Greiman
 Change #define SPI_DRIVER_SELECT 0 to 2 in libraries/SdFat/src/SdFatConfig.h
 
 The font files, FreeSans-13-1252.h, FreeSansOblique-13-1252, FreeSansBold-13-1252.h and FreeSansBoldOblique-13-1252,
-are gfx renditions of the GNU FreeFont, proportional sans-serif version in regular, italics, bold and bold-italics,
+are gfx renditions of the GNU FreeFont, proportional sans-serif version, in regular, italics, bold and bold-italics,
 downloaded from https://ftp.gnu.org/gnu/freefont/freefont-otf-20120503.tar.gz,
 changed to 13 pixel BDF format using Font forge (https://fontforge.org/en-US/downloads/),
 according to instructions from https://learn.adafruit.com/custom-fonts-for-pyportal-circuitpython-display/conversion,
@@ -191,9 +191,9 @@ void loop() {
   writepos(false);
   //Serial.printf("Startpos before page=%d\n", startpos);
   if (section!="") { //If there is a section
-    int temppos=startpos; //Remember current startpos
-    startpos=file.size(); //Scan through whole file
-    if (!processpage(PT_SCAN,section)) startpos=temppos; //Restore previous start position if not found
+//    int temppos=startpos; //Remember current startpos
+//    startpos=file.size(); //Scan through whole file
+    scanpages(section);
   }
   processpage(PT_OUTPUT, ""); //Output page, section is no longer relevant
   timing=0;
@@ -392,7 +392,8 @@ void parsepath(String &fullpath, String &relpath) {
   fullpath+=relpath; //Append what's left of the link to fullpath
 }
 
-//Scans document looking for previous page or page with section reference
+//Scans document looking for previous page (i.e. page that ends on or after beginning of current page)
+//or page with section reference. If section is provided the whole file will be scanned.
 void scanpages(String section) {
   if (!fileopen(file, fullpath, O_READ)) {
     return; //We can do nothing if we cannot open the file
@@ -400,7 +401,8 @@ void scanpages(String section) {
   int pages=0;
   elapsedMillis scantime;
   uint32_t target=startpos; //Target for endpos
-  Serial.printf("Scanpages: Target=%d\n",target);
+  if (section!="") target=file.fileSize();
+  Serial.printf("Scanpages: Target=%d Section=%s\n",target,section.c_str());
   startpos=0;
   setfont(FONT_NORMAL);
   display.setTextSize(0);
@@ -412,10 +414,10 @@ void scanpages(String section) {
   //Initialize savestack
   strcpy(savestack[0].tag,stylestack[0].tag);
   stylecopy(savestack[0].value,stylestack[0].value);
-  if (processpage(PT_SCAN, section)) return; //Process first page to get endpos, return if section found
+  if (processpage(PT_SCAN, section)) return; //Process first page to get endpos, return immediately if section found
   while(endpos<target && startpos!=endpos) {
     //Repeat until endpos>=target or startpos==endpos (indicating no progress)
-    //Serial.printf("Startpos=%d endpos=%d target=%d\n",startpos,endpos,target);
+    Serial.printf("Startpos=%d endpos=%d target=%d\n",startpos,endpos,target);
     saveflags=flags; //Save flags and style stack
     savecount=stylestackcount;
     for (int i=0;i<savecount;i++) {
@@ -423,7 +425,7 @@ void scanpages(String section) {
       stylecopy(savestack[i].value,stylestack[i].value);
     }
     startpos=endpos; //Move on to next page
-    if (processpage(PT_SCAN, section)) return; //Process next page, return ig section found
+    if (processpage(PT_SCAN, section)) return; //target=endpos; //Process next page, force end of loop if section found
     pages++;
   }
   flags=saveflags; //Restore flags and style stack to beginning of page
@@ -506,18 +508,22 @@ void displaytext(int &dX, int &dY, String &buffer, String &stylebuffer, int buff
   Serial.printf("First line=%d, dX=%d :%s\n",flags & FLAGFIRSTLINE,dX,buffer.c_str());
   //Existing dX is ignored for center and right alignment
   if (getflag(SFR_RIGHT,curstyle[SVR_FLAGS])) dX=displaywidth-curstyle[SVR_RIGHTMARGIN]-bufferwidth;
-  if (getflag(SFR_CENTER,curstyle[SVR_FLAGS])) 
-          dX=(displaywidth-curstyle[SVR_RIGHTMARGIN]-curstyle[SVR_LEFTMARGIN]-bufferwidth)/2;
-  display.setCursor(dX,dY); //Set start of line
-  int understart=dX;
-  int underend;
+  if (getflag(SFR_CENTER,curstyle[SVR_FLAGS])) dX=(displaywidth-curstyle[SVR_RIGHTMARGIN]-curstyle[SVR_LEFTMARGIN]-bufferwidth)/2;
+  //display.setCursor(dX,dY); //Set start of line
+  int charstart=dX;
+  int charend;
+  int vertical;
   for (uint32_t i=0;i<buffer.length();i++) {
+    vertical=dY;
+    if (getflag(SFR_SUP,stylebuffer[i]))  vertical-=descender;
+    if (getflag(SFR_SUB,stylebuffer[i]))  vertical+=descender;
+    display.setCursor(charstart,vertical);
     setfont(getflag(SFR_FONT,stylebuffer[i]));
     display.print(buffer[i]);
-    underend=understart+charadvance(curfont, buffer[i]);
-    if (getflag(SFR_UNDERLINE,stylebuffer[i])) display.drawLine(understart,dY,underend,dY,EPD_BLACK);
-    if (getflag(SFR_STRIKE,stylebuffer[i])) display.drawLine(understart,dY-5,underend,dY-5,EPD_BLACK);
-    understart=underend;
+    charend=charstart+charadvance(curfont, buffer[i]);
+    if (getflag(SFR_UNDERLINE,stylebuffer[i])) display.drawLine(charstart,dY,charend,dY,EPD_BLACK);
+    if (getflag(SFR_STRIKE,stylebuffer[i])) display.drawLine(charstart,dY-5,charend,dY-5,EPD_BLACK);
+    charstart=charend;
   }
 }
 
@@ -545,7 +551,7 @@ inline bool withinbounds(int dY) {
 //Processes a page from file according to precesstype. PT_CSS (0) scans from start of file to end of <head> section
 //in order to ingest stylesheets, but otherwise doesn't update values. PT_SCAN (1) scans from startpos to end of page
 //and updates working values without displaying the page. PT_OUTPUT (2) is same as PT_SCAN, except actually outputs
-//page to display. Returns true if section reference found on page.
+//page to display. Function returns true if section reference found on page.
 bool processpage(int processtype, const String &section) {
   // Serial.printf("Before page: Flags=%d, processtype=%d\n",flags,processpage);
   // Serial.println("Style stack at start of page:");
@@ -623,7 +629,7 @@ bool processpage(int processtype, const String &section) {
   stylemember linestack[stylestackmaxcount]; //Holds style stack at start of line, in case of orphaned lines
   uint8_t linestackcount=stylestackcount;
   copystack(linestack,stylestack,stylestackcount);
-  stylemember wordstack[stylestackmaxcount]; //Holds style stack at start of line, in case of orphaned lines
+  stylemember wordstack[stylestackmaxcount]; //Holds style stack at start of word, in case of orphaned lines
   uint8_t wordstackcount=stylestackcount;
   copystack(wordstack,stylestack,stylestackcount);
   int extpos=0; //Used to remember where we were in document while reading external stylesheet
@@ -1093,6 +1099,14 @@ bool processpage(int processtype, const String &section) {
           // Italics
           pushstyle(tag);
           setflag(SFR_ITALIC,stylestack[stylestackcount-1].value[SVR_FLAGS],1);
+        } else if (tag=="sup") {
+          // Superscript
+          pushstyle(tag);
+          setflag(SFR_SUP,stylestack[stylestackcount-1].value[SVR_FLAGS],1);
+        } else if (tag=="sub") {
+          // Superscript
+          pushstyle(tag);
+          setflag(SFR_SUB,stylestack[stylestackcount-1].value[SVR_FLAGS],1);
         } else if (tag=="caption" || tag=="center") {
           //Center
           pushstyle(tag);
@@ -1174,9 +1188,9 @@ bool processpage(int processtype, const String &section) {
           linestyle="";
           linewidth=0;
           dY+=lineheight;
-        } else {
-          copystack(stylestack,linestack,linestackcount); //Revert style stack to beginning of line
-          stylestackcount=linestackcount;
+        // } else {
+        //   copystack(stylestack,linestack,wordstackcount); //Revert style stack to beginning of line
+        //   stylestackcount=linetackcount;
         }
       } else {
         //Line will *not* extend beyond boundaries
@@ -1222,9 +1236,9 @@ bool processpage(int processtype, const String &section) {
         linewidth=0;
         prevbottom=curstyle[SVR_BOTTOMMARGIN]; //Hold bottom margin for potential collapsing with next paragraphs top margin
         dY+=lineheight; //Add line height
-      } else {
-        copystack(stylestack,linestack,linestackcount); //Revert style stack to beginning of line
-        stylestackcount=linestackcount;
+      // } else {
+      //   copystack(stylestack,linestack,linestackcount); //Revert style stack to beginning of line
+      //   stylestackcount=linestackcount;
       }
     }
     if (dohr && withinbounds(dY)) {
@@ -1255,6 +1269,10 @@ bool processpage(int processtype, const String &section) {
       }
     }
   } // while (val!=-1 && dY<=dH-menuheight-descender-margin && linkcount<=8) {
+  if (!withinbounds(dY)) { //If out of bounds, revert stylestack to beginning of line
+    copystack(stylestack,linestack,linestackcount); //Revert style stack to beginning of line
+    stylestackcount=linestackcount;
+  }
   //digitalWrite(LED_BUILTIN,HIGH); //Make sure we leave the busy led on after all the blinking, there is still proccessing to be done
   Serial.printf("Processed page in %lu mS\n", (unsigned long)processtime);
   //Serial.printf("After page: Flags=%d, processtype=%d\n",flags,processpage);
